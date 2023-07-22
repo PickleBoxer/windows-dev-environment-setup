@@ -168,7 +168,7 @@ sudo apt-get install git
 
 ## 📝 Git Config (windows and in wsl)
 
-## Name
+### Name
 
 To set up your Git config file, open a WSL command line and set your name with this command (replacing "Your Name" with your preferred username):
 
@@ -176,7 +176,7 @@ To set up your Git config file, open a WSL command line and set your name with t
 git config --global user.name "Your Name"
 ```
 
-## Email
+### Email
 
 Set your email with this command (replacing "youremail@domain.com" with the email you prefer):
 
@@ -184,7 +184,7 @@ Set your email with this command (replacing "youremail@domain.com" with the emai
 git config --global user.email "youremail@domain.com"
 ```
 
-## Username
+### Username
 
 Finally, add your GitHub username to link it to git (case sensitive!):
 
@@ -194,13 +194,11 @@ git config --global user.username "GitHub username"
 
 > ⚠️ You can double-check any of your settings by typing `git config --list`. To make any changes, just type the necessary command again as in the examples above.
 
----
-
-# 😺 GitHub Credentials
+## 😺 GitHub Credentials
 
 <img src="img/gcm.jpg" alt="Git" />
 
-## 🔑💻 **Sharing Credentials & Settings with Git for Windows**
+### 🔑💻 **Sharing Credentials & Settings with Git for Windows**
 
 To seamlessly share credentials and settings between WSL and the Windows host, it's best to install the [latest Git for Windows](https://github.com/git-for-windows/git/releases/latest). The installation includes Git Credential Manager (GCM), with each new release containing the latest version. During installation, GCM is set as the default credential helper.
 
@@ -212,7 +210,7 @@ To set up GCM for use with a WSL distribution, open your distribution and enter 
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 ```
 
-## 🔏 **Signing Commits with GPG Key**
+### 🔏 **Signing Commits with GPG Key**
 
 Local Git configuration allows us to sign commits using a GPG key. Once signed, GitHub marks those commits as verified, giving others confidence that the changes originate from a trusted source.
 
@@ -301,6 +299,8 @@ gpg --armor --export "Use the alias of the GPG key here"
 Now, open the GitHub page to add the GPG key:
 
 🌐 [GitHub Add GPG Key](https://github.com/settings/gpg/new)
+
+---
 
 # ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
 
