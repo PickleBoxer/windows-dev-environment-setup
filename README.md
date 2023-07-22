@@ -510,11 +510,7 @@ Don't forget the period at the end to open the current directory. 💫💡
 ### Changing the Default Shell
 
 The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` + `Shift` + `P` and typing/choosing Terminal: Select Default Profile, then selecting zsh:
-
-<p align="center">
+   
 ![command-palette](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/e169863f-1c27-4414-aa5f-bd29c70e9887)
-</p>
-
-<p align="center">
+   
 ![zsh-profile](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/71693026-af03-455c-af4a-a6e1e822d873)
-</p>
