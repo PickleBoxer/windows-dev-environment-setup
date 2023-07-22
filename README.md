@@ -58,6 +58,8 @@ sudo apt update && sudo apt upgrade
 
 ## ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
 
+<img src="img/terminal.png" alt="Microsoft Terminal" />
+
 Windows Terminal unleashes the potential of any application with a command line interface.
 
 🐧 Whenever a new WSL Linux distribution is installed, Windows Terminal conjures a dedicated instance that you can fine-tune to your liking.
@@ -71,3 +73,25 @@ Windows Terminal unleashes the potential of any application with a command line 
    2. Startup section find the Default profile dropdown, select Ubuntu and Windows Terminal as the Default terminal
 5. Appearance: Tailor [themes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/appearance#theme), [color schemes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), [names, starting directories](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general), [background images](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#background-image), and more...
 6. Set up a custom prompt for [PowerShell or WSL with Oh My Posh](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup).
+
+## 📝💻 **Set Up Your Favorite Code Editor**
+
+👉 Recommended Visual Studio Code Insiders for seamless remote development and debugging with WSL.
+
+🚀 **Use Visual Studio Code Insiders:**
+
+Follow these steps to get started:
+
+1. Install [Visual Studio Code insiders](https://code.visualstudio.com/insiders/).
+2. Get the [Remote Development extension pack for WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack).
+3. [Follow this step-by-step guide to Get started using Visual Studio Code with WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
+
+<img src="img/vscode-remote-wsl-extensions.png" alt="Microsoft VS Code" />
+
+Once set up, open your WSL project with a VS Code remote server:
+
+```bash
+code-insiders .
+```
+
+Don't forget the period at the end to open the current directory. 💫💡
