@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="wsl-icon" src="https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/78610f7d-11d0-415d-a991-7346fc1c1723">
+</p>
+
 # Windows dev environment setup
 
 ## 🚀 Overview
