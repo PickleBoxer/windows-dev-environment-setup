@@ -314,7 +314,7 @@ Windows Terminal unleashes the potential of any application with a command line 
 5. Appearance: Tailor [themes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/appearance#theme), [color schemes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), [names, starting directories](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general), [background images](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#background-image), and more...
 6. Set up a custom prompt for [PowerShell or WSL with Oh My Posh](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup).
 
-   [![ohmyposh](img/getitfrom.png)]('ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK')
+   [![ohmyposh](img/getitfrom.png)](https://apps.microsoft.com/store/detail/XP8K0HKJFRXGCK)
 
 ## 💤 Zsh - Embrace the Power!
 
@@ -398,6 +398,8 @@ For a vast list of plugins, check out the [awesome zsh plugins repository](https
 
 ## 🎨 Oh My Posh - Supercharge Your Linux Terminal Prompt
 
+![ohmyposh](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/12360da5-5ddd-4771-8db2-8a91bdb308dd)
+
 Oh My Posh is a delightful framework that enhances your Linux terminal prompt and makes it not only more informative but also visually appealing. Customize and transform your prompt into something that matches your style and productivity needs. 🌟🚀
 
 ### 🚀 Installing Oh My Posh
@@ -441,6 +443,44 @@ To install Homebrew on Linux, follow these steps:
 
 That's it! Enjoy using Homebrew to simplify package management on your Linux system. 🍺🚀
 
+## 💡 Microsoft PowerToys - Enhance Windows Experience
+
+![image](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/447639ca-3e38-4f47-bb99-098d76dd6449)
+
+Microsoft PowerToys is a set of handy utilities for Windows, boosting productivity and improving multitasking. It includes features like window management, keyboard shortcuts, color picker, image resizer, and more.
+
+### 🚀 Installing Microsoft PowerToys
+
+You can install Microsoft PowerToys using multiple methods:
+
+- **Winget**: Open a terminal and run:
+
+```sh
+winget install Microsoft.PowerToys --source winget
+```
+
+- **Microsoft Store**: Search for ["Microsoft PowerToys"](https://aka.ms/getPowertoys) in the Microsoft Store and install it from there.
+
+- **GitHub**: Visit the official [PowerToys GitHub](https://github.com/microsoft/PowerToys) page, download the latest release installer, and follow the installation wizard.
+
+### 🛠️ Using Microsoft PowerToys
+
+Access PowerToys Settings from the Start menu or system tray to enable, disable, and customize utilities.
+
+### 🎯 Notable PowerToys Utilities
+
+- **FancyZones**: Organize windows into custom layouts for better multitasking.
+
+- **Shortcut Guide**: Display helpful keyboard shortcuts overlay.
+
+- **PowerRename**: Batch rename files with advanced search and replace.
+
+- **Color Picker**: Easily pick colors from your screen.
+
+- **Image Resizer**: Resize images from File Explorer.
+
+- **File Explorer Preview Pane**: Preview files directly in File Explorer.
+
 ## 📝💻 **Set Up Your Favorite Code Editor**
 
 👉 Recommended Visual Studio Code Insiders for seamless remote development and debugging with WSL.
@@ -466,3 +506,15 @@ Don't forget the period at the end to open the current directory. 💫💡
 💡 **Note:**
 
 > When using Remote - WSL, you must install any VS Code extensions you need separately. Extensions that are already installed locally on VS Code won't be automatically available in the WSL environment. To [Learn more](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions), refer to the documentation.
+
+### Changing the Default Shell
+
+The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` + `Shift` + `P` and typing/choosing Terminal: Select Default Profile, then selecting zsh:
+
+<p align="center">
+![command-palette](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/e169863f-1c27-4414-aa5f-bd29c70e9887)
+</p>
+
+<p align="center">
+![zsh-profile](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/71693026-af03-455c-af4a-a6e1e822d873)
+</p>
