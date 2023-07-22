@@ -313,10 +313,8 @@ Windows Terminal unleashes the potential of any application with a command line 
    5. If it is still opening into your `/` directory, change the `Command line` setting located right above the `Starting directory` input box to the following: `wsl.exe -d Ubuntu`
 5. Appearance: Tailor [themes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/appearance#theme), [color schemes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), [names, starting directories](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general), [background images](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#background-image), and more...
 6. Set up a custom prompt for [PowerShell or WSL with Oh My Posh](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup).
-   <!--[![ohmyposh](https://ohmyposh.dev/assets/images/winstore-efdb3aaf75cf0992c25b5fde7c3f8ed7.png)](ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK)-->
-   <a href="ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK">
-     <img src="[https://placehold.it/350x350](https://ohmyposh.dev/assets/images/winstore-efdb3aaf75cf0992c25b5fde7c3f8ed7.png)" width="200" />
-   </a>
+
+   [![ohmyposh](img/getitfrom.png)](ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK)
 
 ## 💤 Zsh - Embrace the Power!
 
@@ -398,6 +396,50 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 For a vast list of plugins, check out the [awesome zsh plugins repository](https://github.com/unixorn/awesome-zsh-plugins). 🛠️🔌🌟
 
+## 🎨 Oh My Posh - Supercharge Your Linux Terminal Prompt
+
+Oh My Posh is a delightful framework that enhances your Linux terminal prompt and makes it not only more informative but also visually appealing. Customize and transform your prompt into something that matches your style and productivity needs. 🌟🚀
+
+### 🚀 Installing Oh My Posh
+
+1. Install
+
+```bash
+curl -s https://ohmyposh.dev/install.sh | bash -s
+```
+
+2. Activate the plugin in `~/.zshrc`:
+
+```bash
+# Oh My Posh init Theme
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/jandedobbeleer.omp.json)"
+```
+
+3. Start a new terminal session. 🌈🌟
+
+Next, you'll need to [install and set up a suitable font](https://ohmyposh.dev/docs/installation/fonts) to display the special characters used by Oh My Posh.
+
+That's it! Your Linux terminal prompt should now be enhanced with the beautiful and informative Oh My Posh theme. Customize further by exploring the various options available in the theme settings. ✨🎨
+
+For more information and advanced customization, check out the official [Oh My Posh documentation](https://ohmyposh.dev/docs) and unleash the full potential of your Linux terminal prompt! 💻🔥
+
+## 🍺 Homebrew - The Missing Package Manager for Linux
+
+Homebrew is a popular package manager for macOS, and now it's available for Linux too! With Homebrew, you can easily install, update, and manage various packages and applications on your Linux system.
+
+### 🚀 Installing Homebrew
+
+To install Homebrew on Linux, follow these steps:
+
+1. Open a terminal window.
+
+2. Install Homebrew using the following command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+That's it! Enjoy using Homebrew to simplify package management on your Linux system. 🍺🚀
 
 ## 📝💻 **Set Up Your Favorite Code Editor**
 
