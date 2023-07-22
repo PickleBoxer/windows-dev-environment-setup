@@ -134,6 +134,72 @@ xclock
 xeyes
 ```
 
+## 📄 **Set Up Version Management with Git**
+
+Discover the power of 🔗 [Git version control system](https://example.com/git-setup-guide) on WSL! 🚀
+
+<img src="img/git.gif" alt="Git" />
+
+### 💻🚀 **Installing Git**
+
+Git often comes pre-installed with most Windows Subsystem for Linux distributions. However, to ensure you have the latest version, consider updating it. Don't forget to set up your git config file.
+
+📥 To install Git, visit the Git Download for Linux site. Each Linux distribution has its unique package manager and install command.
+
+👉 For the latest stable Git version on Ubuntu/Debian, run:
+
+```bash
+sudo apt-get install git
+```
+
+📝 Note:
+
+>If you haven't already, you may want to [install Git for Windows](https://git-scm.com/download/win) too. 🎉
+
+### 📝 Git Config (windows and in wsl)
+
+### Name
+
+To set up your Git config file, open a WSL command line and set your name with this command (replacing "Your Name" with your preferred username):
+
+```sh
+git config --global user.name "Your Name"
+```
+
+### Email
+
+Set your email with this command (replacing "youremail@domain.com" with the email you prefer):
+
+```sh
+git config --global user.email "youremail@domain.com"
+```
+
+### Username
+
+Finally, add your GitHub username to link it to git (case sensitive!):
+
+```sh
+git config --global user.username "GitHub username"
+```
+
+> ⚠️ You can double-check any of your settings by typing `git config --list`. To make any changes, just type the necessary command again as in the examples above.
+
+## 😺 GitHub Credentials
+
+<img src="img/gcm.jpg" alt="Git" />
+
+### 🔑💻 **Sharing Credentials & Settings with Git for Windows**
+
+To seamlessly share credentials and settings between WSL and the Windows host, it's best to install the [latest Git for Windows](https://github.com/git-for-windows/git/releases/latest). The installation includes Git Credential Manager (GCM), with each new release containing the latest version. During installation, GCM is set as the default credential helper.
+
+⚠️ If you have reasons to avoid installing Git for Windows, you can directly install GCM as a Linux application within your WSL distribution. However, keep in mind that this setup means GCM will run as a Linux application and won't utilize the authentication or credential storage features of the host Windows operating system. For instructions on [configuring WSL without Git for Windows](https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/wsl.md#configuring-wsl-without-git-for-windows), refer to the GCM repository.
+
+To set up GCM for use with a WSL distribution, open your distribution and enter this command:
+
+```bash
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+```
+
 ## ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
 
 <img src="img/terminal.png" alt="Microsoft Terminal" />
