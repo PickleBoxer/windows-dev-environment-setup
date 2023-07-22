@@ -16,6 +16,8 @@ Before beginning the setup process, ensure that your system meets the following 
 - Administrator access to your machine
 - An internet connection
 
+---
+
 # 🐧 WSL: The Heart of Your Windows Dev Environment
 
 To set up your Windows development environment, the first and most vital step is installing the Windows Subsystem for Linux (WSL). 🚀
@@ -142,6 +144,8 @@ xclock
 xeyes
 ```
 
+---
+
 # 📄 **Set Up Version Management with Git**
 
 Discover the power of 🔗 [Git version control system](https://example.com/git-setup-guide) on WSL! 🚀
@@ -160,9 +164,7 @@ Git often comes pre-installed with most Windows Subsystem for Linux distribution
 sudo apt-get install git
 ```
 
-📝 Note:
-
->If you haven't already, you may want to [install Git for Windows](https://git-scm.com/download/win) too. 🎉
+> 📝 Note: If you haven't already, you may want to [install Git for Windows](https://git-scm.com/download/win) too. 🎉
 
 ## 📝 Git Config (windows and in wsl)
 
@@ -191,6 +193,8 @@ git config --global user.username "GitHub username"
 ```
 
 > ⚠️ You can double-check any of your settings by typing `git config --list`. To make any changes, just type the necessary command again as in the examples above.
+
+---
 
 # 😺 GitHub Credentials
 
@@ -324,6 +328,8 @@ Windows Terminal unleashes the potential of any application with a command line 
 
    [![ohmyposh](img/getitfrom.png)](https://apps.microsoft.com/store/detail/XP8K0HKJFRXGCK)
 
+---
+
 # 💤 Zsh - Embrace the Power!
 
 Z shell, also known as Zsh, works almost identically to the standard BASH shell found on default Linux installs. But what makes it stand out are its incredible support for plugins and themes, along with cool features like spelling correction and recursive path expansion. It's time to leave BASH behind and unlock the full potential of Zsh! 💪😎
@@ -433,6 +439,8 @@ That's it! Your Linux terminal prompt should now be enhanced with the beautiful 
 
 For more information and advanced customization, check out the official [Oh My Posh documentation](https://ohmyposh.dev/docs) and unleash the full potential of your Linux terminal prompt! 💻🔥
 
+---
+
 # 🍺 Homebrew - The Missing Package Manager for Linux
 
 Homebrew is a popular package manager for macOS, and now it's available for Linux too! With Homebrew, you can easily install, update, and manage various packages and applications on your Linux system.
@@ -450,6 +458,8 @@ To install Homebrew on Linux, follow these steps:
 ```
 
 That's it! Enjoy using Homebrew to simplify package management on your Linux system. 🍺🚀
+
+---
 
 # 💡 Microsoft PowerToys - Enhance Windows Experience
 
@@ -489,6 +499,8 @@ Access PowerToys Settings from the Start menu or system tray to enable, disable,
 
 - **File Explorer Preview Pane**: Preview files directly in File Explorer.
 
+---
+
 # 📝💻 **Set Up Your Favorite Code Editor**
 
 👉 Recommended Visual Studio Code Insiders for seamless remote development and debugging with WSL.
@@ -522,6 +534,8 @@ The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` 
 ![command-palette](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/e169863f-1c27-4414-aa5f-bd29c70e9887)
    
 ![zsh-profile](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/71693026-af03-455c-af4a-a6e1e822d873)
+
+---
 
 # 🐳 Set up Remote Development Containers with Docker
 
