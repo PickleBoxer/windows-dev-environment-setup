@@ -200,6 +200,96 @@ To set up GCM for use with a WSL distribution, open your distribution and enter 
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 ```
 
+### 🔏 **Signing Commits with GPG Key**
+
+Local Git configuration allows us to sign commits using a GPG key. Once signed, GitHub marks those commits as verified, giving others confidence that the changes originate from a trusted source.
+
+#### 🚀 **Installing Required Programs**
+
+To get started, we need to [install Gpg4Win. 📥](https://gnupg.org/download/#binary)
+
+#### 🔑🚀 **Generate a GPG Key**
+
+> If you installed gnupg using Winget or Chocolatey from the command line, remember to restart the console or refresh the environment variables.
+
+🖥️ Open a Windows PowerShell command window.
+
+Run this command to generate the GPG key:
+
+```bash
+gpg --full-generate-key
+```
+
+It will prompt for specific details, use the following:
+
+- Kind: RSA & RSA.
+- Key Size: 4096 bits.
+- Expiration: 0 (Never expires).
+- Real Name: Use your GitHub Username.
+- Email: Use your GitHub email; this will be the alias of the GPG key.
+- Comment: You can leave this empty.
+
+#### 🛠️ **Configure Git for Windows**
+
+🖥️ Open a Windows PowerShell command window.
+
+```bash
+# 1.First locate where gnupg is installed and save it into a variable:
+$gnupgPath = where.exe gpg
+
+# 2.Configure Git to use gnupg as GPG program:
+git config --global gpg.program $gnupgPath
+
+# 3.Configure Git to sign all commits by default:
+git config --global commit.gpgsign true
+
+# 4.Configure Git to use your GPG key as signing key
+git config --global user.signingkey "Use the alias of the GPG key here"
+
+# 5.Optional: Configure Git to sign all tags by default:
+git config --global tag.gpgsign true
+```
+
+#### 💻🐧 **Configure Git for WSL (Windows Subsystem for Linux)**
+
+🖥️ Open a Windows PowerShell command window.
+
+```bash
+# 1.First locate where gnupg is installed and save it into a variable:
+$gnupgPath = where.exe gpg
+
+# 2.Translate the path to WSL:
+$gnupgWslPath = wsl wslpath $gnupgPath
+
+# 3.Configure Git to use gnupg as GPG program:
+wsl git config --global gpg.program $gnupgWslPath
+
+# 4.Configure Git to sign all commits by default:
+wsl git config --global commit.gpgsign true
+
+# 5.Configure Git to use your GPG key as signing key
+wsl git config --global user.signingkey "Use the alias of the GPG key here"
+
+# 6.Optional: Configure Git to sign all tags by default:
+wsl git config --global tag.gpgsign true
+```
+
+#### 🔑🔧 **Configure the GPG Key in GitHub**
+
+1. **Export the Key**
+
+To export the GPG key, use the following command:
+
+```bash
+gpg --armor --export "Use the alias of the GPG key here"
+```
+
+2. **Add GPG Key on GitHub**
+
+Now, open the GitHub page to add the GPG key:
+
+🌐 [GitHub Add GPG Key](https://github.com/settings/gpg/new)
+
 ## ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
 
 <img src="img/terminal.png" alt="Microsoft Terminal" />
@@ -215,8 +305,99 @@ Windows Terminal unleashes the potential of any application with a command line 
 3. Default Startup Profile: Configure your preferred starting setup.
    1. Select the `˅` icon from Windows Terminal and go to the Settings menu
    2. Startup section find the Default profile dropdown, select Ubuntu and Windows Terminal as the Default terminal
+4. Starting Directory
+   1. Under the Profiles section in the settings menu click on Ubuntu
+   2. At the General tab, you will find a Starting directory input
+   3. Enter the following replacing "username" with your Ubuntu user name: `\\wsl$\Ubuntu\home\username`
+   4. You can leave the `Use parent process directory` box unchecked
+   5. If it is still opening into your `/` directory, change the `Command line` setting located right above the `Starting directory` input box to the following: `wsl.exe -d Ubuntu`
 5. Appearance: Tailor [themes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/appearance#theme), [color schemes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), [names, starting directories](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general), [background images](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#background-image), and more...
 6. Set up a custom prompt for [PowerShell or WSL with Oh My Posh](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup).
+   <!--[![ohmyposh](https://ohmyposh.dev/assets/images/winstore-efdb3aaf75cf0992c25b5fde7c3f8ed7.png)](ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK)-->
+   <a href="ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK">
+     <img src="[https://placehold.it/350x350](https://ohmyposh.dev/assets/images/winstore-efdb3aaf75cf0992c25b5fde7c3f8ed7.png)" width="200" />
+   </a>
+
+## 💤 Zsh - Embrace the Power!
+
+Z shell, also known as Zsh, works almost identically to the standard BASH shell found on default Linux installs. But what makes it stand out are its incredible support for plugins and themes, along with cool features like spelling correction and recursive path expansion. It's time to leave BASH behind and unlock the full potential of Zsh! 💪😎
+
+### 🚀 Installing Zsh
+
+To install Zsh, execute this command:
+
+```bash
+sudo apt install zsh
+```
+
+Once installed, type `zsh` in the terminal. Zsh will prompt you to choose some configurations. Don't worry; we'll handle this later while installing oh-my-zsh. For now, select option `0` to create the config file and prevent this message from showing again. 🛠️👉 0️⃣
+
+### 🔥 OhMyZsh - The Ultimate Zsh Experience!
+
+The most popular plugin framework by far is [OhMyZsh](https://ohmyz.sh/). It comes preloaded with a plethora of plugins, themes, helpers, and more. Not only does it enhance productivity, but it also adds a touch of coolness to your terminal. 😍🔌💻
+
+### 🌐 cURL - Essential for Downloads
+
+Before we proceed, ensure you have [cURL](https://curl.se/) installed. It's a fantastic way to transfer data from the command line, and that's how we'll download OhMyZsh.
+
+```bash
+sudo apt install curl
+```
+
+### ⚙️ Installing OhMyZsh - Your Personal Assistant
+
+Enter the following command into your terminal to install OhMyZsh:
+
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Great! Now you should see a `.oh-my-zsh` directory inside your home directory. To customize plugins and themes, edit your `.zshrc` file, also found in your home directory.
+
+Here is a list of all the [themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) and [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) bundled with OhMyZsh. 💼🎨🔌
+
+### 🔌 More Plugins - Enhance Your Zsh Experience
+
+While there are countless plugins available, here are two highly recommended ones:
+
+#### 🚀 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
+This plugin provides autosuggestions for zsh, suggesting commands as you type based on history and completions.
+
+1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`):
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
+
+```bash
+plugins=(git zsh-autosuggestions)
+```
+
+3. Start a new terminal session. 🚀🎛️
+
+#### 🌈 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+This package provides syntax highlighting for the zsh shell, highlighting commands as they are typed in an interactive terminal. It helps in reviewing commands before running them, particularly in catching syntax errors.
+
+1. Clone this repository into oh-my-zsh's plugins directory:
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+2. Activate the plugin in `~/.zshrc`:
+
+```bash
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+3. Start a new terminal session. 🌈🌟
+
+For a vast list of plugins, check out the [awesome zsh plugins repository](https://github.com/unixorn/awesome-zsh-plugins). 🛠️🔌🌟
+
 
 ## 📝💻 **Set Up Your Favorite Code Editor**
 
