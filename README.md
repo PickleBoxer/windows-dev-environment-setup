@@ -8,7 +8,7 @@
 
 Setting up a development environment on Windows can be a challenging task, but with the right tools and guidance, it can be made easier. This guide will provide step-by-step instructions for setting up a development environment on Windows, including installing WSL, Terminal, Git, and Visual Studio Code Insider.
 
-### Prerequisites:
+## Prerequisites:
 
 Before beginning the setup process, ensure that your system meets the following requirements:
 
@@ -16,10 +16,10 @@ Before beginning the setup process, ensure that your system meets the following 
 - Administrator access to your machine
 - An internet connection
 
-## 🐧 WSL: The Heart of Your Windows Dev Environment
+# 🐧 WSL: The Heart of Your Windows Dev Environment
 
 To set up your Windows development environment, the first and most vital step is installing the Windows Subsystem for Linux (WSL). 🚀
-### 💻 Installing WSL 2: A Breeze
+## 💻 Installing WSL 2: A Breeze
 
 WSL 2 is the latest version, featuring a full Linux kernel and complete system call compatibility. No longer requiring multiple steps, all you need to do is execute this single command in PowerShell or Command Prompt:
 
@@ -42,7 +42,7 @@ With WSL at your disposal, the Windows development landscape becomes yours to co
 
 [![WSL](img/getitfrom.png)](https://www.microsoft.com/store/productId/9P9TQF7MRM4R)
 
-### 🔧 **Setting Up Linux User & Password:**
+## 🔧 **Setting Up Linux User & Password:**
 
 🔒 After installing your Linux distribution with WSL, launch it from the Start menu. You'll create a unique User Name and Password during the initial run.
 
@@ -54,7 +54,7 @@ With WSL at your disposal, the Windows development landscape becomes yours to co
 
 📝 Each WSL distribution has its own set of user accounts. Configuring a new account is necessary when adding, reinstalling, or resetting.
 
-### 📦 **Update & Upgrade Packages:**
+## 📦 **Update & Upgrade Packages:**
 
 To keep your system shipshape, regularly update and upgrade packages with your distribution's preferred package manager. For Ubuntu or Debian, execute:
 
@@ -64,7 +64,7 @@ sudo apt update && sudo apt upgrade
 
 ⚙️ Windows won't auto-update or upgrade your Linux distribution(s). Linux users typically prefer controlling this task themselves.
 
-### Restarting WSL
+## Restarting WSL
 
 If WSL stops working, you can restart it with these two commands from PowerShell/Command Prompt:
 
@@ -73,7 +73,7 @@ wsl.exe --shutdown
 wsl.exe
 ```
 
-### 🖥️ **Run Linux GUI Apps**
+## 🖥️ **Run Linux GUI Apps**
 
 <img src="img/wsl-gui.png" alt="WSL GUI" />
 
@@ -81,7 +81,7 @@ From your Linux terminal, use these commands to download and install popular Lin
 
 For more info check [Linux GUI Apps](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps?source=recommendations).
 
-#### 🖋️ **Install Gnome Text Editor**
+### 🖋️ **Install Gnome Text Editor**
 
 Gnome Text Editor, the default text editor of the GNOME desktop environment, can be installed with a simple command:
 
@@ -96,7 +96,7 @@ gnome-text-editor ~/.bashrc
 
 >GNOME Text Editor takes over as GNOME/Ubuntu's default text editor in Ubuntu 22.10, replacing gedit. If you're using an older version of Ubuntu and prefer gedit, the previous default text editor, use this command:
 
-#### 🖌️ Install GIMP
+### 🖌️ Install GIMP
 
 GIMP, the free and open-source raster graphics editor, empowers you with image manipulation, free-form drawing, transcoding between various image formats, and more. To install GIMP, execute:
 
@@ -107,7 +107,7 @@ sudo apt install gimp -y
 gimp
 ```
 
-#### 🗂️ Install Nautilus
+### 🗂️ Install Nautilus
 
 Nautilus, also known as GNOME Files, serves as the file manager for the GNOME desktop environment (akin to Windows File Explorer). To install Nautilus, use:
 
@@ -118,7 +118,7 @@ sudo apt install nautilus -y
 nautilus
 ```
 
-#### 📺 Install VLC
+### 📺 Install VLC
 
 VLC, the free and open-source multimedia player and framework, handles most multimedia files with ease. To get VLC, run:
 
@@ -129,7 +129,7 @@ sudo apt install vlc -y
 vlc
 ```
 
-#### 💻 Install X11 Apps
+### 💻 Install X11 Apps
 
 The Linux windowing system, X11, comes with a collection of miscellaneous apps and tools like xclock, xcalc calculator, xclipboard for cut and paste, xev for event testing, and more. For installation:
 
@@ -142,13 +142,13 @@ xclock
 xeyes
 ```
 
-## 📄 **Set Up Version Management with Git**
+# 📄 **Set Up Version Management with Git**
 
 Discover the power of 🔗 [Git version control system](https://example.com/git-setup-guide) on WSL! 🚀
 
 <img src="img/git.gif" alt="Git" />
 
-### 💻🚀 **Installing Git**
+## 💻🚀 **Installing Git**
 
 Git often comes pre-installed with most Windows Subsystem for Linux distributions. However, to ensure you have the latest version, consider updating it. Don't forget to set up your git config file.
 
@@ -164,9 +164,9 @@ sudo apt-get install git
 
 >If you haven't already, you may want to [install Git for Windows](https://git-scm.com/download/win) too. 🎉
 
-### 📝 Git Config (windows and in wsl)
+## 📝 Git Config (windows and in wsl)
 
-### Name
+## Name
 
 To set up your Git config file, open a WSL command line and set your name with this command (replacing "Your Name" with your preferred username):
 
@@ -174,7 +174,7 @@ To set up your Git config file, open a WSL command line and set your name with t
 git config --global user.name "Your Name"
 ```
 
-### Email
+## Email
 
 Set your email with this command (replacing "youremail@domain.com" with the email you prefer):
 
@@ -182,7 +182,7 @@ Set your email with this command (replacing "youremail@domain.com" with the emai
 git config --global user.email "youremail@domain.com"
 ```
 
-### Username
+## Username
 
 Finally, add your GitHub username to link it to git (case sensitive!):
 
@@ -192,11 +192,11 @@ git config --global user.username "GitHub username"
 
 > ⚠️ You can double-check any of your settings by typing `git config --list`. To make any changes, just type the necessary command again as in the examples above.
 
-## 😺 GitHub Credentials
+# 😺 GitHub Credentials
 
 <img src="img/gcm.jpg" alt="Git" />
 
-### 🔑💻 **Sharing Credentials & Settings with Git for Windows**
+## 🔑💻 **Sharing Credentials & Settings with Git for Windows**
 
 To seamlessly share credentials and settings between WSL and the Windows host, it's best to install the [latest Git for Windows](https://github.com/git-for-windows/git/releases/latest). The installation includes Git Credential Manager (GCM), with each new release containing the latest version. During installation, GCM is set as the default credential helper.
 
@@ -208,15 +208,15 @@ To set up GCM for use with a WSL distribution, open your distribution and enter 
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 ```
 
-### 🔏 **Signing Commits with GPG Key**
+## 🔏 **Signing Commits with GPG Key**
 
 Local Git configuration allows us to sign commits using a GPG key. Once signed, GitHub marks those commits as verified, giving others confidence that the changes originate from a trusted source.
 
-#### 🚀 **Installing Required Programs**
+### 🚀 **Installing Required Programs**
 
 To get started, we need to [install Gpg4Win. 📥](https://gnupg.org/download/#binary)
 
-#### 🔑🚀 **Generate a GPG Key**
+### 🔑🚀 **Generate a GPG Key**
 
 > If you installed gnupg using Winget or Chocolatey from the command line, remember to restart the console or refresh the environment variables.
 
@@ -237,7 +237,7 @@ It will prompt for specific details, use the following:
 - Email: Use your GitHub email; this will be the alias of the GPG key.
 - Comment: You can leave this empty.
 
-#### 🛠️ **Configure Git for Windows**
+### 🛠️ **Configure Git for Windows**
 
 🖥️ Open a Windows PowerShell command window.
 
@@ -258,7 +258,7 @@ git config --global user.signingkey "Use the alias of the GPG key here"
 git config --global tag.gpgsign true
 ```
 
-#### 💻🐧 **Configure Git for WSL (Windows Subsystem for Linux)**
+### 💻🐧 **Configure Git for WSL (Windows Subsystem for Linux)**
 
 🖥️ Open a Windows PowerShell command window.
 
@@ -282,7 +282,7 @@ wsl git config --global user.signingkey "Use the alias of the GPG key here"
 wsl git config --global tag.gpgsign true
 ```
 
-#### 🔑🔧 **Configure the GPG Key in GitHub**
+### 🔑🔧 **Configure the GPG Key in GitHub**
 
 1. **Export the Key**
 
@@ -298,7 +298,7 @@ Now, open the GitHub page to add the GPG key:
 
 🌐 [GitHub Add GPG Key](https://github.com/settings/gpg/new)
 
-## ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
+# ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
 
 <img src="img/terminal.png" alt="Microsoft Terminal" />
 
@@ -324,11 +324,11 @@ Windows Terminal unleashes the potential of any application with a command line 
 
    [![ohmyposh](img/getitfrom.png)](https://apps.microsoft.com/store/detail/XP8K0HKJFRXGCK)
 
-## 💤 Zsh - Embrace the Power!
+# 💤 Zsh - Embrace the Power!
 
 Z shell, also known as Zsh, works almost identically to the standard BASH shell found on default Linux installs. But what makes it stand out are its incredible support for plugins and themes, along with cool features like spelling correction and recursive path expansion. It's time to leave BASH behind and unlock the full potential of Zsh! 💪😎
 
-### 🚀 Installing Zsh
+## 🚀 Installing Zsh
 
 To install Zsh, execute this command:
 
@@ -338,11 +338,11 @@ sudo apt install zsh
 
 Once installed, type `zsh` in the terminal. Zsh will prompt you to choose some configurations. Don't worry; we'll handle this later while installing oh-my-zsh. For now, select option `0` to create the config file and prevent this message from showing again. 🛠️👉 0️⃣
 
-### 🔥 OhMyZsh - The Ultimate Zsh Experience!
+## 🔥 OhMyZsh - The Ultimate Zsh Experience!
 
 The most popular plugin framework by far is [OhMyZsh](https://ohmyz.sh/). It comes preloaded with a plethora of plugins, themes, helpers, and more. Not only does it enhance productivity, but it also adds a touch of coolness to your terminal. 😍🔌💻
 
-### 🌐 cURL - Essential for Downloads
+## 🌐 cURL - Essential for Downloads
 
 Before we proceed, ensure you have [cURL](https://curl.se/) installed. It's a fantastic way to transfer data from the command line, and that's how we'll download OhMyZsh.
 
@@ -350,7 +350,7 @@ Before we proceed, ensure you have [cURL](https://curl.se/) installed. It's a fa
 sudo apt install curl
 ```
 
-### ⚙️ Installing OhMyZsh - Your Personal Assistant
+## ⚙️ Installing OhMyZsh - Your Personal Assistant
 
 Enter the following command into your terminal to install OhMyZsh:
 
@@ -362,11 +362,11 @@ Great! Now you should see a `.oh-my-zsh` directory inside your home directory. T
 
 Here is a list of all the [themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) and [plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) bundled with OhMyZsh. 💼🎨🔌
 
-### 🔌 More Plugins - Enhance Your Zsh Experience
+## 🔌 More Plugins - Enhance Your Zsh Experience
 
 While there are countless plugins available, here are two highly recommended ones:
 
-#### 🚀 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+### 🚀 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 This plugin provides autosuggestions for zsh, suggesting commands as you type based on history and completions.
 
@@ -384,7 +384,7 @@ plugins=(git zsh-autosuggestions)
 
 3. Start a new terminal session. 🚀🎛️
 
-#### 🌈 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+### 🌈 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 This package provides syntax highlighting for the zsh shell, highlighting commands as they are typed in an interactive terminal. It helps in reviewing commands before running them, particularly in catching syntax errors.
 
@@ -410,7 +410,7 @@ For a vast list of plugins, check out the [awesome zsh plugins repository](https
 
 Oh My Posh is a delightful framework that enhances your Linux terminal prompt and makes it not only more informative but also visually appealing. Customize and transform your prompt into something that matches your style and productivity needs. 🌟🚀
 
-### 🚀 Installing Oh My Posh
+## 🚀 Installing Oh My Posh
 
 1. Install
 
@@ -433,11 +433,11 @@ That's it! Your Linux terminal prompt should now be enhanced with the beautiful 
 
 For more information and advanced customization, check out the official [Oh My Posh documentation](https://ohmyposh.dev/docs) and unleash the full potential of your Linux terminal prompt! 💻🔥
 
-## 🍺 Homebrew - The Missing Package Manager for Linux
+# 🍺 Homebrew - The Missing Package Manager for Linux
 
 Homebrew is a popular package manager for macOS, and now it's available for Linux too! With Homebrew, you can easily install, update, and manage various packages and applications on your Linux system.
 
-### 🚀 Installing Homebrew
+## 🚀 Installing Homebrew
 
 To install Homebrew on Linux, follow these steps:
 
@@ -451,13 +451,13 @@ To install Homebrew on Linux, follow these steps:
 
 That's it! Enjoy using Homebrew to simplify package management on your Linux system. 🍺🚀
 
-## 💡 Microsoft PowerToys - Enhance Windows Experience
+# 💡 Microsoft PowerToys - Enhance Windows Experience
 
 ![image](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/447639ca-3e38-4f47-bb99-098d76dd6449)
 
 Microsoft PowerToys is a set of handy utilities for Windows, boosting productivity and improving multitasking. It includes features like window management, keyboard shortcuts, color picker, image resizer, and more.
 
-### 🚀 Installing Microsoft PowerToys
+## 🚀 Installing Microsoft PowerToys
 
 You can install Microsoft PowerToys using multiple methods:
 
@@ -471,11 +471,11 @@ winget install Microsoft.PowerToys --source winget
 
 - **GitHub**: Visit the official [PowerToys GitHub](https://github.com/microsoft/PowerToys) page, download the latest release installer, and follow the installation wizard.
 
-### 🛠️ Using Microsoft PowerToys
+## 🛠️ Using Microsoft PowerToys
 
 Access PowerToys Settings from the Start menu or system tray to enable, disable, and customize utilities.
 
-### 🎯 Notable PowerToys Utilities
+## 🎯 Notable PowerToys Utilities
 
 - **FancyZones**: Organize windows into custom layouts for better multitasking.
 
@@ -489,7 +489,7 @@ Access PowerToys Settings from the Start menu or system tray to enable, disable,
 
 - **File Explorer Preview Pane**: Preview files directly in File Explorer.
 
-## 📝💻 **Set Up Your Favorite Code Editor**
+# 📝💻 **Set Up Your Favorite Code Editor**
 
 👉 Recommended Visual Studio Code Insiders for seamless remote development and debugging with WSL.
 
@@ -515,7 +515,7 @@ Don't forget the period at the end to open the current directory. 💫💡
 
 > When using Remote - WSL, you must install any VS Code extensions you need separately. Extensions that are already installed locally on VS Code won't be automatically available in the WSL environment. To [Learn more](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions), refer to the documentation.
 
-### Changing the Default Shell
+## Changing the Default Shell
 
 The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` + `Shift` + `P` and typing/choosing Terminal: Select Default Profile, then selecting zsh:
    
@@ -523,5 +523,51 @@ The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` 
    
 ![zsh-profile](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/71693026-af03-455c-af4a-a6e1e822d873)
 
-![h7589gyc9530l1c0y9vj](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/d9d9c2fd-bb9c-4cd7-9a91-3f28155b411f)
+# 🐳 Set up Remote Development Containers with Docker
 
+Docker enables you to set up remote development containers effortlessly. Follow this [step-by-step guide to get started with Docker remote containers on WSL 2](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers) and connect your project to a remote development container using Docker Desktop for Windows.
+
+## 🚀 Get Started with Docker Remote Containers on WSL 2
+
+1. **Install Docker Desktop for Windows**: Download and install [Docker Desktop from the official Docker website.](https://docs.docker.com/docker-for-windows/wsl/#download)
+
+2. **Configure Docker for WSL 2**: Open Docker Desktop settings and enable the "Use the WSL 2 based engine" option under the "General" section.
+
+   ![docker-starting](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/0730981c-2cd8-4def-9af8-96f46bd6d3df)
+
+   ![docker-running](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/e26c5497-d3ad-42f4-8bbb-4f6b00ea838b)
+
+   ![docker-dashboard](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/9f0d9ae4-6f68-4715-ad2b-af11b96bba87)
+
+4. **Connect to WSL 2**: Open a terminal in your Linux distribution running on WSL 2 and ensure you can run Docker commands without any issues.
+  
+  ```bash
+  # Display the version and build number by entering:
+  docker --version
+  # Test that your installation works correctly by running a simple built-in Docker image using:
+  docker run hello-world
+  ```
+
+## 🔄 Use Docker Desktop to Manage Remote Containers
+
+With Docker Desktop for Windows, you can conveniently manage and switch between different remote development containers directly from the Docker interface.
+
+Now you're all set to enjoy the power of remote development with Docker containers! Happy coding! 🚀💻
+
+## ⚙️ Develop in Remote Containers with VS Code
+
+Develop apps using Docker with ease and efficiency using VS Code and essential extensions: WSL, Dev Containers, and Docker. 👩‍💻🐳
+
+1. [**Install VS Code WSL Extension**:](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) Seamlessly open Linux projects running on WSL in VS Code, eliminating pathing issues and cross-OS challenges.
+
+2. [**Install VS Code Dev Containers Extension**:](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) Work inside a container for your project folder or repository, utilizing VS Code's full power.
+
+3. [**Install VS Code Docker Extension**:](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) Manage containerized applications directly from VS Code. Pair with Dev Containers for a smooth development environment. 🏗️
+
+---
+
+<sub>Make sure you have Docker Desktop installed and properly configured on your Windows machine to follow this guide successfully. Remote development containers provide a convenient and consistent development environment across different machines and platforms, enhancing productivity and collaboration.</sub>
+
+<p align="center">
+  <img alt="cin cin" src="https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/d9d9c2fd-bb9c-4cd7-9a91-3f28155b411f">
+</p>
