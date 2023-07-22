@@ -314,7 +314,7 @@ Windows Terminal unleashes the potential of any application with a command line 
 5. Appearance: Tailor [themes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/appearance#theme), [color schemes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), [names, starting directories](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general), [background images](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#background-image), and more...
 6. Set up a custom prompt for [PowerShell or WSL with Oh My Posh](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup).
 
-   [[ohmyposh](img/getitfrom.png)](ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK)
+   [![ohmyposh](img/getitfrom.png)]('ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK')
 
 ## 💤 Zsh - Embrace the Power!
 
