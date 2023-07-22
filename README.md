@@ -56,6 +56,84 @@ sudo apt update && sudo apt upgrade
 
 ⚙️ Windows won't auto-update or upgrade your Linux distribution(s). Linux users typically prefer controlling this task themselves.
 
+### Restarting WSL
+
+If WSL stops working, you can restart it with these two commands from PowerShell/Command Prompt:
+
+```sh
+wsl.exe --shutdown
+wsl.exe
+```
+
+### 🖥️ **Run Linux GUI Apps**
+
+<img src="img/wsl-gui.png" alt="WSL GUI" />
+
+From your Linux terminal, use these commands to download and install popular Linux applications. Remember, if your distribution isn't Ubuntu, the package manager may vary from apt. Once installed, access the app through the Start menu under your distribution name. For instance, Ubuntu -> Microsoft Edge.
+
+For more info check [Linux GUI Apps](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps?source=recommendations).
+
+#### 🖋️ **Install Gnome Text Editor**
+
+Gnome Text Editor, the default text editor of the GNOME desktop environment, can be installed with a simple command:
+
+```bash
+sudo apt install gnome-text-editor -y
+
+# To launch your bashrc file in the editor, enter:
+gnome-text-editor ~/.bashrc
+```
+
+📝 Note:
+
+>GNOME Text Editor takes over as GNOME/Ubuntu's default text editor in Ubuntu 22.10, replacing gedit. If you're using an older version of Ubuntu and prefer gedit, the previous default text editor, use this command:
+
+#### 🖌️ Install GIMP
+
+GIMP, the free and open-source raster graphics editor, empowers you with image manipulation, free-form drawing, transcoding between various image formats, and more. To install GIMP, execute:
+
+```bash
+sudo apt install gimp -y
+
+# To launch GIMP, simply type:
+gimp
+```
+
+#### 🗂️ Install Nautilus
+
+Nautilus, also known as GNOME Files, serves as the file manager for the GNOME desktop environment (akin to Windows File Explorer). To install Nautilus, use:
+
+```bash
+sudo apt install nautilus -y
+
+# Launch Nautilus by entering:
+nautilus
+```
+
+#### 📺 Install VLC
+
+VLC, the free and open-source multimedia player and framework, handles most multimedia files with ease. To get VLC, run:
+
+```bash
+sudo apt install vlc -y
+
+# Launch VLC by typing:
+vlc
+```
+
+#### 💻 Install X11 Apps
+
+The Linux windowing system, X11, comes with a collection of miscellaneous apps and tools like xclock, xcalc calculator, xclipboard for cut and paste, xev for event testing, and more. For installation:
+
+```bash
+sudo apt install x11-apps -y
+
+# To launch a specific tool, simply enter its name, for example:
+xcalc
+xclock
+xeyes
+```
+
 ## ⌨️ **Set Up Windows Terminal: Power Up Your Command Line**
 
 <img src="img/terminal.png" alt="Microsoft Terminal" />
@@ -69,7 +147,7 @@ Windows Terminal unleashes the potential of any application with a command line 
 1. Installation: Get it from the Microsoft Store - [Windows Terminal or Windows Terminal (Preview)](https://learn.microsoft.com/en-us/windows/terminal/get-started).
 2. Custom Actions: [Set up keyboard shortcuts that suit your natural workflow](https://learn.microsoft.com/en-us/windows/terminal/#custom-actions).
 3. Default Startup Profile: Configure your preferred starting setup.
-   1. Select the ˅ icon from Windows Terminal and go to the Settings menu
+   1. Select the `˅` icon from Windows Terminal and go to the Settings menu
    2. Startup section find the Default profile dropdown, select Ubuntu and Windows Terminal as the Default terminal
 5. Appearance: Tailor [themes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/appearance#theme), [color schemes](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), [names, starting directories](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-general), [background images](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#background-image), and more...
 6. Set up a custom prompt for [PowerShell or WSL with Oh My Posh](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup).
@@ -95,3 +173,7 @@ code-insiders .
 ```
 
 Don't forget the period at the end to open the current directory. 💫💡
+
+💡 **Note:**
+
+> When using Remote - WSL, you must install any VS Code extensions you need separately. Extensions that are already installed locally on VS Code won't be automatically available in the WSL environment. To [Learn more](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions), refer to the documentation.
