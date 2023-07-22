@@ -38,6 +38,10 @@ Should you wish to change your default Linux distribution, follow the provided [
 
 With WSL at your disposal, the Windows development landscape becomes yours to conquer! 💪🌟
 
+**Installing WSL through the store will allow you to get the latest WSL updates and features faster, and without needing to modify your Windows version.**
+
+[![getitfrom](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/48337533-4fba-484b-bdac-fbbee31ef56d)](https://www.microsoft.com/store/productId/9P9TQF7MRM4R)
+
 ### 🔧 **Setting Up Linux User & Password:**
 
 🔒 After installing your Linux distribution with WSL, launch it from the Start menu. You'll create a unique User Name and Password during the initial run.
@@ -518,3 +522,6 @@ The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` 
 ![command-palette](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/e169863f-1c27-4414-aa5f-bd29c70e9887)
    
 ![zsh-profile](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/71693026-af03-455c-af4a-a6e1e822d873)
+
+![h7589gyc9530l1c0y9vj](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/d9d9c2fd-bb9c-4cd7-9a91-3f28155b411f)
+
