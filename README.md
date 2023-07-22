@@ -40,7 +40,7 @@ With WSL at your disposal, the Windows development landscape becomes yours to co
 
 **Installing WSL through the store will allow you to get the latest WSL updates and features faster, and without needing to modify your Windows version.**
 
-[![getitfrom](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/48337533-4fba-484b-bdac-fbbee31ef56d)](https://www.microsoft.com/store/productId/9P9TQF7MRM4R)
+[![WSL](img/getitfrom.png)](https://www.microsoft.com/store/productId/9P9TQF7MRM4R)
 
 ### 🔧 **Setting Up Linux User & Password:**
 
