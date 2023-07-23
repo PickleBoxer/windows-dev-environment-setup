@@ -94,9 +94,7 @@ sudo apt install gnome-text-editor -y
 gnome-text-editor ~/.bashrc
 ```
 
-📝 Note:
-
->GNOME Text Editor takes over as GNOME/Ubuntu's default text editor in Ubuntu 22.10, replacing gedit. If you're using an older version of Ubuntu and prefer gedit, the previous default text editor, use this command:
+> 📝 Note: GNOME Text Editor takes over as GNOME/Ubuntu's default text editor in Ubuntu 22.10, replacing gedit. If you're using an older version of Ubuntu and prefer gedit, the previous default text editor, use this command:
 
 ### 🖌️ Install GIMP
 
@@ -578,9 +576,50 @@ Develop apps using Docker with ease and efficiency using VS Code and essential e
 
 3. [**Install VS Code Docker Extension**:](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) Manage containerized applications directly from VS Code. Pair with Dev Containers for a smooth development environment. 🏗️
 
----
+## 🚀 Working with Git?
+
+Consider these essential tips:
+
+1. **Consistent Line Endings**: When working with the same repository locally in Windows and inside a container, ensure consistent line endings for smooth collaboration. Check out our [tips and tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files) for details.
+
+   Adding the following to .gitattributes file to the root of your repository:
+
+```bash
+  * text=auto eol=lf
+  *.{cmd,[cC][mM][dD]} text eol=crlf
+  *.{bat,[bB][aA][tT]} text eol=crlf
+  ```
+
+3. **Seamless Git Credentials**: If you clone using a Git credential manager, your container will have access to your credentials automatically! For SSH keys, you can also opt-in to [sharing them](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials). Find more about Sharing Git credentials with your container.
+
+### 🔐 **Sharing GPG Keys** (Optional)
+If you want to GPG sign your commits, you can share your local keys with your container as well. You can find out about signing using a GPG key in [GitHub's documentation.](https://docs.github.com/authentication/managing-commit-signature-verification)
+
+If you do not have GPG set up, you can configure it for your platform:
+
+- On WSL:
+  - Install [Gpg4win](https://www.gpg4win.org/) on the Windows side.
+  - Install `gpg` in your WSL distro. `sudo apt install gpg`
+  - Register a `pinentry` GUI in your WSL distro. `echo pinentry-program /mnt/c/Program\ Files\ \(x86\)/Gpg4win/bin/pinentry.exe > ~/.gnupg/gpg-agent.conf`
+  - Reload the gpg agent in WSL. `gpg-connect-agent reloadagent /bye`
+ 
+> 📝 Note: For Windows user, the gpg signing key must be configured using the Windows GUI or CLI (powershell/cmd) and not in Git Bash. A Dev Container can't access the gpg keys set in Git Bash even though it is in your ~/.gnupg/ folder, accessible in the Windows Explorer.
+ 
+Next, install gnupg2 in your container by updating your `Dockerfile`.
+
+```dockerfile
+RUN apt-get update && apt-get install gnupg2 -y
+```
+
+Or if running as a non-root user:
+
+```dockerfile
+RUN sudo apt-get update && sudo apt-get install gnupg2 -y
+```
 
 <sub>Make sure you have Docker Desktop installed and properly configured on your Windows machine to follow this guide successfully. Remote development containers provide a convenient and consistent development environment across different machines and platforms, enhancing productivity and collaboration.</sub>
+
+---
 
 <p align="center">
   <img alt="cin cin" src="https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/d9d9c2fd-bb9c-4cd7-9a91-3f28155b411f">
