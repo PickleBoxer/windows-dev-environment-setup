@@ -419,6 +419,10 @@ Oh My Posh is a delightful framework that enhances your Linux terminal prompt an
 1. Install
 
 ```bash
+# Using Homebrew
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
+
+# Manual
 curl -s https://ohmyposh.dev/install.sh | bash -s
 ```
 
