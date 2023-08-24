@@ -144,6 +144,48 @@ xeyes
 
 ---
 
+# 🔐 **Remote Development using SSH**
+
+The [VS Code Remote - SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) lets you open a remote folder on any machine with a running SSH server and use all of VS Code's features. After connecting to a server, you can work with files and folders anywhere on the remote filesystem.
+
+To get started, you need to install an [OpenSSH compatible SSH client](https://code.visualstudio.com/docs/remote/troubleshooting#_installing-a-supported-ssh-client) if one is not already present.
+
+## 🚀 **Install OpenSSH for Windows**
+
+To install OpenSSH using PowerShell, run PowerShell as an Administrator. To make sure that OpenSSH is available, run the following cmdlet:
+
+```powershell
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+```
+
+Then, install the server or client components as needed:
+
+```powershell
+# Install the OpenSSH Client
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+# Install the OpenSSH Server
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+```
+
+To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right click, Run as an administrator), then run the following commands to start the `sshd service`:
+
+```powershell
+# Start the sshd service
+Start-Service sshd
+
+# OPTIONAL but recommended:
+Set-Service -Name sshd -StartupType 'Automatic'
+
+# Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
+if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+    New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+} else {
+    Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+}
+```
+
 # 📄 **Set Up Version Management with Git**
 
 Discover the power of 🔗 [Git version control system](https://example.com/git-setup-guide) on WSL! 🚀
@@ -537,6 +579,17 @@ The WSL2 shell can be chosen as the default VS Code terminal by pressing `Ctrl` 
    
 ![zsh-profile](https://github.com/PickleBoxer/windows-dev-environment-setup/assets/78869247/71693026-af03-455c-af4a-a6e1e822d873)
 
+## 🚀 Remote Tutorials
+
+The tutorials below will walk you through running Visual Studio Code with the Remote Development extensions.
+
+| Tutorial | Description |
+| --- | --- |
+| 💻 [Remote via SSH](https://code.visualstudio.com/docs/remote/ssh-tutorial) | Connect to remote and virtual machines with Visual Studio Code via SSH. |
+| 🐧 [Work in WSL](https://code.visualstudio.com/docs/remote/wsl-tutorial) | Run Visual Studio Code in Windows Subsystem for Linux. |
+| 🐳 [Develop in Containers](https://code.visualstudio.com/docs/devcontainers/tutorial) | Run Visual Studio Code in a Docker Container. |
+| 🔗 [GitHub Codespaces](https://docs.github.com/github/developing-online-with-codespaces/using-codespaces-in-visual-studio-code) | Connect to a codespace with Visual Studio Code. |
+
 ---
 
 # 🐳 Set up Remote Development Containers with Docker
@@ -623,6 +676,28 @@ RUN sudo apt-get update && sudo apt-get install gnupg2 -y
 
 <sub>Make sure you have Docker Desktop installed and properly configured on your Windows machine to follow this guide successfully. Remote development containers provide a convenient and consistent development environment across different machines and platforms, enhancing productivity and collaboration.</sub>
 
+# 🛠️ Windows Apps
+
+- [Postman](https://www.postman.com/) - A collaboration platform for API development with features like automated testing, mock servers, and documentation generation.
+- [FileZilla](https://filezilla-project.org/) - A fast and reliable FTP, FTPS, and SFTP client for file transfer.
+- [PuTTY](https://www.putty.org/) - A free and open-source terminal emulator, serial console, and network file transfer application.
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) - A visual database design tool that integrates SQL development, administration, database design, creation, and maintenance into a single, seamless environment.
+- [WizTree](https://wiztreefree.com/) - A disk space analyzer for quickly scanning your entire hard drive and then shows you which files and folders are using the most disk space.
+- [Notion](https://www.notion.so/) - A note-taking and collaboration application with markdown support.
+- [WinMerge](https://winmerge.org/) - A free and open-source differencing and merging tool for Windows.
+- ...
+
+#  🆚 VS Code Extensions
+
+- ....
+
+
+# 📝 References
+
+- [Set up your development environment on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/)
+- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/)
+- ...
+  
 ---
 
 <p align="center">
