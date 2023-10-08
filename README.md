@@ -679,6 +679,7 @@ RUN sudo apt-get update && sudo apt-get install gnupg2 -y
 # 🛠️ Windows Apps
 
 - [Postman](https://www.postman.com/) - A collaboration platform for API development with features like automated testing, mock servers, and documentation generation.
+- [HeidiSQL](https://www.heidisql.com/) - "Heidi" lets you see and edit data and structures from computers running one of the database systems MariaDB, MySQL, Microsoft SQL, PostgreSQL and SQLite.
 - [FileZilla](https://filezilla-project.org/) - A fast and reliable FTP, FTPS, and SFTP client for file transfer.
 - [PuTTY](https://www.putty.org/) - A free and open-source terminal emulator, serial console, and network file transfer application.
 - [MySQL Workbench](https://www.mysql.com/products/workbench/) - A visual database design tool that integrates SQL development, administration, database design, creation, and maintenance into a single, seamless environment.
