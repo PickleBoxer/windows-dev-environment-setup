@@ -472,7 +472,7 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 
 ```bash
 # Oh My Posh init Theme
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/jandedobbeleer.omp.json)"
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json)"
 ```
 
 3. Start a new terminal session. 🌈🌟
