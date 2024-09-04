@@ -737,7 +737,8 @@ RUN sudo apt-get update && sudo apt-get install gnupg2 -y
 - [WizTree](https://wiztreefree.com/) - A disk space analyzer for quickly scanning your entire hard drive and then shows you which files and folders are using the most disk space.
 - [Notion](https://www.notion.so/) - A note-taking and collaboration application with markdown support.
 - [WinMerge](https://winmerge.org/) - A free and open-source differencing and merging tool for Windows.
-- ...
+- [DBngin](https://dbngin.com/) - All-in-One Database Version Management Tool - The easiest way to get started with PostgreSQL, MySQL, Redis & more
+- [Laravel Herd](https://herd.laravel.com/windows) - Laravel development perfected - One click PHP development environment. Zero dependencies. Zero headaches.
 
 #  🆚 VS Code Extensions
 
