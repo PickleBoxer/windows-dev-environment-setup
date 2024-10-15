@@ -56,6 +56,17 @@ With WSL at your disposal, the Windows development landscape becomes yours to co
 
 📝 Each WSL distribution has its own set of user accounts. Configuring a new account is necessary when adding, reinstalling, or resetting.
 
+> **Note:** You can configure WSL to not require a password for sudo.
+> 
+> Replace `MY_USERNAME` below with your actual username:
+> ```sh
+> sudo nano /etc/sudoers.d/MY_USERNAME
+> ```
+> Add the following line:
+> ```sh
+> MY_USERNAME ALL=(ALL) NOPASSWD:ALL
+> ```
+
 ## 📦 **Update & Upgrade Packages:**
 
 To keep your system shipshape, regularly update and upgrade packages with your distribution's preferred package manager. For Ubuntu or Debian, execute:
