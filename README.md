@@ -135,6 +135,21 @@ You can also follow this [link](https://getcomposer.org/download/) for actual in
     composer --version
     ```
 
+> [!TIP]
+> You do not need to install PHP or Composer locally. You can use Docker as an example:
+> ```sh
+> docker run -it --rm --name my-running-script \
+>     -v "$PWD":/usr/src/myapp \
+>     -w /usr/src/myapp \
+>     php:8.2-cli php your-script.php
+>
+> docker run --rm php:8.2-cli sh -c 'php -r "echo \"Hello, World!\n\";"'
+> 
+> docker run --rm --interactive --tty \
+>     --volume $PWD:/app \
+>     composer <command>
+> ```
+
 By following these steps, you've equipped your WSL environment with PHP and Composer, ready for robust PHP development. Happy coding! 🖥️✨
 
 ## 🖥️ **Run Linux GUI Apps**
