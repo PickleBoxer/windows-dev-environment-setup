@@ -765,6 +765,7 @@ RUN sudo apt-get update && sudo apt-get install gnupg2 -y
 - [WinMerge](https://winmerge.org/) - A free and open-source differencing and merging tool for Windows.
 - [DBngin](https://dbngin.com/) - All-in-One Database Version Management Tool - The easiest way to get started with PostgreSQL, MySQL, Redis & more
 - [Laravel Herd](https://herd.laravel.com/windows) - Laravel development perfected - One click PHP development environment. Zero dependencies. Zero headaches.
+- [TablePlus](https://tableplus.com/) - Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more
 
 #  🆚 VS Code Extensions
 
